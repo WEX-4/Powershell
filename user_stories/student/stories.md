@@ -6,6 +6,52 @@
 
 `Team Name:` `YOUR NAME`
 
+# Prequisites
+Before we begin, let us set up out developer environment. This allows us to access all of the necessary libraries, and our database.
+
+## Development Instructions
+
+### First, open a terminal in VSCode
+
+1. Click on the bottom left corner of the screen, where you will see a cross and warning symbol (ask your mentor if you need help finding it!)
+2. Navigate to the terminal, where you will be able to type commands.
+3. Copy and paste the following commands into the terminal and press enter.
+4. This will complete the setup of your developer environment!
+
+### To setup the virtual environment
+
+1. Create a virtual environment:
+
+```python3 -m venv venv```
+
+2. Activate the virtual environment:
+
+```venv\Scripts\activate```
+
+You should now see ```(venv)``` at the beginning of your terminal.
+
+3. Install dependencies:
+
+```pip install -r requirements.txt```
+
+### To setup the database
+
+1. Run ```make docker-compose``` to bring up the postgres container.
+
+2. Run ```make setup-db``` to create a facts table in the database and insert some sample data.
+
+3. Verify the migration worked by running ```make db-shell``` and then executing:
+
+```SELECT * FROM facts;```
+
+**Tip:** You can run ```make db-shell``` at any time to enter the database shell (useful for debugging purposes).
+
+### To run the app
+
+1. Run the app:
+
+```python app.py```
+
 # P0: Random Fun Fact Generator
 As an engineer, I want to be able to get a random fun fact from a database, so that I can share them with my team.
 
@@ -167,12 +213,6 @@ As an engineer, I want to be able to add a voting system to my fact service, so 
 
 ---
 
-### HTML Integration
-**P3.5 Update the generate template** in `templates/generate.html`:
-   - Include JavaScript to handle vote button clicks
-   - Update vote counts dynamically without page refresh
-   - Display current vote counts for each fact
-
 # P4: Random Fun Fact Filter
 As an engineer, I want to be able to filter facts by categories, so that I can tailor my facts to the audience.
 
@@ -192,7 +232,7 @@ First, we want to modify our existing workflows to include category information,
    - Update the Fact object creation to include category information
 
 **P4.3 Update the Fact entity** in `fact.py`:
-   - Store category information as an instance variable
+   - Store category information as a variable in the entity
    - Add category information to the string representation
 
 ---
