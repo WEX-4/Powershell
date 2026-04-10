@@ -27,6 +27,8 @@
 - Add to Windows PATH: `C:\Program Files\PostgreSQL\[version]\bin`
 - Verify installation: `psql --version`
 
+**Note:** Make and PostgreSQL will have to be added to the path manually. Go to 'Edit environment variables' on your windows laptop and click on the PATH configurations. Add the paths as above, and OK.
+
 ## Project Setup
 
 ### Step 1: Download ZIP
