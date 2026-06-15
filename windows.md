@@ -114,16 +114,8 @@ python app.py
 - **Success**: Can run SQL commands like `SELECT * FROM facts;`
 
 ## Cleanup (Before Distributing to Students)
-```powershell
-# Deactivate virtual environment
-deactivate
 
-# Delete the database file
-Remove-Item facts.db
-
-# Remove virtual environment folder
-Remove-Item -Recurse -Force venv
-```
+Delete existing repository files from desktop, so that students can clone the repository themselves through git.
 
 ## Troubleshooting Notes
 - If `make` fails: Run `python database/migrations/migrate.py` directly
