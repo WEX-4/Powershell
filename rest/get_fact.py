@@ -6,9 +6,8 @@ from database import get_fact
 def get_route():
     retrievedCategory = None # TODO: (Task P5.3) Get category from query parameters if provided, or set to None if not provided
 
-    # TODO: (Task P0.2) Call database function to get a random fact
     # TODO: (Task P5.3) Pass in category argument
-    fact = None
+    fact = None # TODO: (Task P0.2) Call database function to get a random fact
 
     # Check if the client wants JSON response based on query parameters
     wants_json = request.args.get("json") in ("1", "true", "True")

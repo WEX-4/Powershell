@@ -41,7 +41,7 @@
     <script>
         async function loadCategories() {
             try {
-                const response = await fetch(''); // TODO: (Task P5.8) Update the URL to the correct endpoint
+                const response = await fetch(''); // TODO: (Task P5.8) Update the path to the correct endpoint
                 const data = await response.json();
                 const select = document.getElementById('category-select');
                 data.categories.forEach(cat => {
