@@ -19,7 +19,7 @@
 ### Step 4: Install Git
 - Download Git from https://git-scm.com/download/win
 - Run the installer and accept all default settings (Git Bash and OpenSSH are included)
-- Make sure 
+- Make sure you allow git to be installed **globally** so it can be used in all environments
 - Verify installation by opening **Command Prompt** and running:
 
 ```cmd
