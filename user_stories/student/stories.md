@@ -70,9 +70,13 @@ You should now see ```(venv)``` at the beginning of your terminal.
 
 9. Run `git remote add origin <URL-from-above>` in your terminal
 
-10. Run `git remote -v` to verify the remote is correct
+10. In your **root user folder** (eg. C:/Users/WEX1) you should find a `git_password.txt` file.
 
-11. Run `git push --set-upstream origin main` to transfer the work experience files to the new repository
+11. Run `git remote set-url origin <git_password>@<URL-from-above>` in your terminal to allow user access to the new repository (follows the format` https://github_pat2312323423434234534@github.com/WEX-1/my-amazing-repo.git`)
+
+12. Run `git remote -v` to verify the remote is correct
+
+13. Run `git push --set-upstream origin main` to transfer the work experience files to the new repository
 
 ### To collaborate 
 
