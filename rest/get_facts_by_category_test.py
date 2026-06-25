@@ -1,4 +1,5 @@
 # Task P5.9
+# To Run: pytest rest/get_facts_by_category_test.py
 
 import pytest
 from unittest.mock import patch

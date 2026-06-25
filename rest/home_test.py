@@ -1,3 +1,4 @@
+# THIS FILE IS NOT A TASK, YOU CAN IGNORE IT. IT IS A TEST FILE FOR THE REST HOME ROUTE.
 import pytest
 from unittest.mock import patch
 from rest.home import home_route

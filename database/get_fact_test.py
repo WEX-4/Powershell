@@ -1,4 +1,5 @@
 # Tasks P0.4, P4.7, P5.9
+# To Run: pytest database/get_fact_test.py
 
 import pytest
 from unittest.mock import patch
@@ -66,7 +67,7 @@ class TestGetFact:
         mock_cursor.fetchone.return_value = None
 
         # ACT
-       # TODO: Call the get_fact function
+        # TODO: Call the get_fact function
 
         # ASSERT
         # TODO: Verify that the Fact object is created with default values for likes/dislikes

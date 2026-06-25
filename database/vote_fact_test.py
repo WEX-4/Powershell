@@ -1,4 +1,5 @@
 # Task P3.5
+# To Run: pytest database/vote_fact_test.py
 
 import pytest
 from unittest.mock import Mock, patch
@@ -63,20 +64,7 @@ class TestVoteFact:
 
         # ASSERT
         # TODO: Verify the returned Fact object has the expected values
-
-        # Verify SQL execution
-        assert mock_cursor.execute.call_count == 2
-        # Check dislike update query
-        mock_cursor.execute.assert_any_call(
-            "UPDATE facts SET dislikes = dislikes + 1 WHERE id = ?;",
-            (2,)
-        )
-        # Check select query
-        mock_cursor.execute.assert_any_call(
-            "SELECT id, fact, category, likes, dislikes FROM facts WHERE id = ?;",
-            (2,)
-        )
-        mock_provider.commit.assert_called_once()
+        # TODO: Verify SQL execution (execute called twice, correct UPDATE and SELECT queries, commit called once)
 
     # Patch the SQLiteConnectionProvider to mock database interactions
     @pytest.mark.parametrize("invalid_vote", ["invalid", ""])
@@ -114,30 +102,6 @@ class TestVoteFact:
 
         # ASSERT
         # TODO: Verify that the returned Fact object handles NULL likes/dislikes appropriately
-
-    # Patch the SQLiteConnectionProvider to mock database interactions
-    @patch.object(sys.modules['database.vote_fact'], 'SQLiteConnectionProvider')
-    def test_vote_fact_cursor_context_manager(self, mock_provider_class):
-        """Test that cursor context manager is used properly"""
-        # ARRANGE
-        mock_provider = Mock()
-        mock_cursor_context = Mock()
-        mock_cursor = Mock()
-
-        mock_provider_class.return_value = mock_provider
-        mock_provider.cursor.return_value = mock_cursor_context
-        mock_cursor_context.__enter__ = Mock(return_value=mock_cursor)
-        mock_cursor_context.__exit__ = Mock(return_value=None)
-
-        mock_cursor.fetchone.return_value = (1, "Test fact", "test", 1, 0)
-
-        # ACT
-        # TODO: Call the vote_fact function to trigger cursor usage
-
-        # ASSERT
-        mock_provider.cursor.assert_called_once()
-        mock_cursor_context.__enter__.assert_called_once()
-        mock_cursor_context.__exit__.assert_called_once()
 
 if __name__ == '__main__':
     pytest.main([__file__])

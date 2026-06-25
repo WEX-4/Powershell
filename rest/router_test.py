@@ -1,3 +1,6 @@
+# Task P0.4, P1.4, P3.5
+# To Run: pytest rest/router_test.py
+
 import pytest
 from unittest.mock import Mock, patch
 

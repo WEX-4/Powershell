@@ -1,4 +1,5 @@
  #P4.7, P5.9
+# To Run: pytest rest/get_fact_test.py
 
 import pytest
 from unittest.mock import patch
