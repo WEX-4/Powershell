@@ -6,6 +6,7 @@ from unittest.mock import patch
 
 from rest.get_fact import get_route
 from fact import Fact
+import json
 
 
 class TestGetFactRoute:
@@ -51,11 +52,18 @@ class TestGetFactRoute:
                 mock_jsonify.return_value = "null attributes json"
 
                 # ACT
-                # TODO: Call the get_route function
-
+                # done: Call the get_route function
+                result = get_route()
                 # ASSERT
-                # TODO: Check that the JSON response is returned
-                mock_jsonify.assert_called_with({}) # TODO: Verify that the JSON response contains default values for null attributes
+                # done: Check that the JSON response is returned
+                assert result ==  "null attributes json"
+                mock_jsonify.assert_called_with({
+                    "id":None, 
+                    "fact":"facts with null attributes",
+                    "category": None,
+                    "likes": 0,
+                    "dislikes": 0
+                }) # done: Verify that the JSON response contains default values for null attributes
 
     # Patch the get_fact function to mock database interactions
     @patch('rest.get_fact.get_fact')
@@ -67,11 +75,13 @@ class TestGetFactRoute:
         with app.test_request_context('/'):
             # ACT
             with pytest.raises(Exception) as exc_info:
-                pass  # TODO: Call the get_route function
+                get_route() # done: Call the get_route function
 
             # ASSERT
-            # TODO: (Task P0.4) Verify the exception message contains the correct error message
-            # TODO: (Task P0.4) Verify that get_fact was called
+                assert "Database connection failed" in str(exc_info.value)
+                mock_get_fact.assert_called_once()
+            # done: (Task P0.4) Verify the exception message contains the correct error message
+            # done: (Task P0.4) Verify that get_fact was called
 
     # Patch the get_fact function to mock database interactions
     @patch('rest.get_fact.get_fact')
@@ -87,11 +97,13 @@ class TestGetFactRoute:
 
                 # ACT
                 with pytest.raises(Exception) as exc_info:
-                    pass  # TODO: Call the get_route function
+                    get_route()  # done: Call the get_route function
 
                 # ASSERT
-                # TODO: (Task P0.4) Verify the exception message contains the correct error message
-                # TODO: (Task P0.4) Verify that get_fact was called
+                    assert "Template not found" in str(exc_info.value)
+                    mock_get_fact.assert_called_once()
+                # done: (Task P0.4) Verify the exception message contains the correct error message
+                # done: (Task P0.4) Verify that get_fact was called
 
 if __name__ == '__main__':
     pytest.main([__file__])
