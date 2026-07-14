@@ -87,11 +87,11 @@ class TestGetFact:
 
         # ACT
         # DONE: (Task P0.4) Call get_fact and verify it raises an exception with the correct message
-        with pytest.raises(Exception) as exc_info:
+        with pytest.raises(Exception) as exec_info:
             get_fact()
 
         #ASSERT
-        assert "Database connection failed" in str(exec_info.value)
+            assert "Database connection failed" in str(exec_info.value)
         mock_cursor.execute.assert_called_once()
 
 
