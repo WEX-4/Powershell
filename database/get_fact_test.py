@@ -85,8 +85,14 @@ class TestGetFact:
         # Mock database error
         mock_cursor.execute.side_effect = Exception("Database connection failed")
 
-        # ACT & ASSERT
-        # TODO: (Task P0.4) Call get_fact and verify it raises an exception with the correct message
+        # ACT
+        # DONE: (Task P0.4) Call get_fact and verify it raises an exception with the correct message
+        with pytest.raises(Exception) as exc_info:
+            get_fact()
+
+        #ASSERT
+        assert "Database connection failed" in str(exec_info.value)
+        mock_cursor.execute.assert_called_once()
 
 
 class TestGetFactsByCategory:
