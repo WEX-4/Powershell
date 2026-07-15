@@ -12,7 +12,7 @@ def create_fact(fact_text) -> Fact:
         # done: (Task P1.1) Write SQL query to add new fact to the database
         # TODO: (Task P3.1) Add likes and dislikes counts to SQL query
         # TODO: (Task P4.3) Add category to SQL query
-        cur.execute("INSERT INTO facts(fact) VALUES (?) RETURNING id;", (fact_text))
+        cur.execute("INSERT INTO facts(fact) VALUES (?) RETURNING id, fact;", (fact_text,))
         fact_data = fetch_fact_data(cur)
         provider.commit()
         if not fact_data:

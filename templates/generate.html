@@ -60,7 +60,8 @@
             const button = document.querySelector('.fact-generator-button');
             const buttonText = document.getElementById('button-text');
             const factText = document.getElementById('fact-text');
-            const selectedCategory = document.getElementById('category-filter').value;
+            const categoryFilter = document.getElementById('category-filter');
+            const selectedCategory = categoryFilter ? categoryFilter.value : '';
             
             // Show loading state
             buttonText.textContent = 'Loading...';

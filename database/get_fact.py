@@ -15,10 +15,6 @@ def get_fact() -> Fact:
         # TODO: (Task P3.1) Add the likes and dislikes counts to the SQL query
         # TODO: (Task P4.2) Add the category column to the SQL query
         fact_data = fetch_fact_data(cur)
-        if result:
-            return Fact(id = result[0], fact = result[1])
-        else:
-            return Fact(id = None, fact = "Fact not found")
         if not fact_data:
             return Fact(id=None, fact="", category=None, likes=0, dislikes=0) # DONE: (Task P0.1) Create and return an empty Fact object if no result is found
 
