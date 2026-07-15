@@ -23,5 +23,5 @@ def create_route():
 
         # TODO: (Task P4.5) Pass the category to the create_fact function
 
-        return render_template('create.html', random_fact = create_fact_entity.fact()) # DONE: (Task P1.2) Pass the HTML template, fact and 
+        return render_template('create.html', random_fact = create_fact_entity.fact) # DONE: (Task P1.2) Pass the HTML template, fact and 
         # TODO: category (Task P4.5) parameters

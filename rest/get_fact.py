@@ -17,7 +17,10 @@ def get_route():
     # Render the HTML template and pass the fact data to it
     return render_template(
         "generate.html",
-        fact,  # TODO (P0.2): Replace 'None' with the fact variable to pass data to template
-        None  # TODO (P4.4): Pass the category to the template
+        random_fact=fact.fact,  # DONE (P0.2): Replace 'None' with the fact variable to pass data to template
+        random_fact_id=fact.id,
+        random_fact_likes=fact.likes,
+        random_fact_dislikes=fact.dislikes,
+        #None  # TODO (P4.4): Pass the category to the template
     )
     # TODO (P4.4): Determine what other data should be passed to the template
