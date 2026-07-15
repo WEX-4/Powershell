@@ -1,5 +1,6 @@
 /*TASK: OPTIONAL - import different google font here */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&family=Dancing+Script:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap');
 
 /* Keyframe animations */
 @keyframes fadeInUp {
@@ -169,8 +170,8 @@ body {
 
 /*TASK: Style the home page */
 .home-container {
-    /*This is image that will be rendered on your website's home page. TASK: Select an image from static/images/backgrounds that suits your teams chosen UI design */
-    background-image: url("../images/backgrounds/mother-of-pearl.jpg");
+    /* (DONE) This is image that will be rendered on your website's home page. TASK: Select an image from static/images/backgrounds that suits your teams chosen UI design */
+    background-image: url("../images/backgrounds/finding-nemo-seagulls.jpg");
 }
 
 /*TASK: Style the generate fact page */
@@ -182,7 +183,7 @@ body {
 /*TASK: Style the create fact form page */
 .create-container {
     /*This is image that will be rendered on your website's fact creation form page. TASK: Select an image from static/images/backgrounds that suits your teams chosen UI design */
-    background-image: url("../images/backgrounds/mother-of-pearl.jpg");
+    background-image: url("../images/backgrounds/whimsy-nature.jpg");
     background-color: rgba(255,255,255,0.6);
     background-blend-mode: lighten;
 }
@@ -199,20 +200,20 @@ body {
     text-align: center;
     font-size: 1.4rem;
     /* OPTIONAL TASK: Change the colour of the page's text (currently a very dark brown!) */
-    color: #1d1717;
+    color: #ffffff;
     animation: fadeInUp var(--animation-duration) ease-out 0.3s both;
 }
 
 .main-container h1 {
     /*TASK: Choose font for your headings */
-    font-family: Georgia, "Times New Roman", serif;
+    font-family: "Google Sans Flex", sans-serif;
     font-size: 3.5rem;
-    font-weight: 700;
+    font-weight: 780;
     /*END OF TASK*/
     margin-bottom: 1rem;
     background: linear-gradient(45deg, #1d1717, #493b3b);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent ;
     background-clip: text;
 }
 
@@ -256,8 +257,8 @@ body {
     The border color can be adjusted to create a stronger or softer outline, depending on the look you're going for.
     The text color can also be changed to ensure good contrast and readability against the background colors you choose!
     */
-    background: linear-gradient(135deg, #ecc2bd, #f2d4d3);
-    border: 2px solid #b59390;
+    background: linear-gradient(135deg, #3791f1, #91c1f4);
+    border: 2px solid #1832c5;
     color: #292121;
     /*END OF TASK*/
     cursor: pointer;
@@ -286,7 +287,7 @@ body {
     Currently matches the background gradient but with a slightly stronger pink tone and a subtle shadow to give it a lifted appearance.
     Change the colors in the gradient to create a different hover effect that fits your design style!
     */
-    background: linear-gradient(135deg, #f2d4d3, #f7e6e5);
+    background: linear-gradient(135deg, #3540dc, #f7e6e5);
     transform: translateY(-3px) scale(1.05);
     box-shadow: 0 8px 25px rgba(236, 194, 189, 0.5);
 }
