@@ -200,7 +200,7 @@ body {
     text-align: center;
     font-size: 1.4rem;
     /* OPTIONAL TASK: Change the colour of the page's text (currently a very dark brown!) */
-    color: #ffffff;
+    color: #1b1111;
     animation: fadeInUp var(--animation-duration) ease-out 0.3s both;
 }
 
@@ -209,12 +209,13 @@ body {
     font-family: "Google Sans Flex", sans-serif;
     font-size: 3.5rem;
     font-weight: 780;
+    background: #e9ecef;
     /*END OF TASK*/
     margin-bottom: 1rem;
-    background: linear-gradient(45deg, #1d1717, #493b3b);
+    /* background: linear-gradient(45deg, #1d1717, #493b3b);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent ;
-    background-clip: text;
+    -webkit-text-fill-color: transparent ; */
+    /* background-clip: text; */
 }
 
 .main-container p {
@@ -224,6 +225,7 @@ body {
     font-size: 1.4rem;
     font-weight: 400;
     opacity: 0.9;
+    background: #e9ecef;
     /*END OF TASK*/
     margin-bottom: 2rem;
 }
