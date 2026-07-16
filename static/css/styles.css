@@ -107,7 +107,7 @@ body {
     /*END OF TASK*/
     padding: 14px 16px;
     /*  TASK: Change colour of your navbar item text */
-    color: #493b3b;
+    color: #7F95D1;
     /* END OF TASK */
     transition: all 0.3s ease;
     position: relative;
@@ -128,7 +128,7 @@ body {
 
 /* TASK: Change the colour of your navbar item text on hover and the colour of the underline that appears when you hover (currently a light brown!) */
 .navbar a:hover {
-    color: #776767;
+    color: #FFC4D1;
 }
 
 /* This makes the underline grow to 80% width when you hover over a navbar item */
@@ -212,7 +212,11 @@ body {
     background: #e9ecef;
     /*END OF TASK*/
     margin-bottom: 1rem;
+<<<<<<< HEAD
     /* background: linear-gradient(45deg, #1d1717, #493b3b);
+=======
+    background: linear-gradient(45deg, #2A2A72, #7F95D1);
+>>>>>>> 342570ee2ad1301c364a383be13239b58316011a
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent ; */
     /* background-clip: text; */
@@ -259,8 +263,8 @@ body {
     The border color can be adjusted to create a stronger or softer outline, depending on the look you're going for.
     The text color can also be changed to ensure good contrast and readability against the background colors you choose!
     */
-    background: linear-gradient(135deg, #3791f1, #91c1f4);
-    border: 2px solid #1832c5;
+    background: linear-gradient(135deg, #A9F8FB, #C0FDFB);
+    border: 2px solid #2A2A72;
     color: #292121;
     /*END OF TASK*/
     cursor: pointer;
@@ -289,7 +293,7 @@ body {
     Currently matches the background gradient but with a slightly stronger pink tone and a subtle shadow to give it a lifted appearance.
     Change the colors in the gradient to create a different hover effect that fits your design style!
     */
-    background: linear-gradient(135deg, #3540dc, #f7e6e5);
+    background: linear-gradient(135deg, #7F95D1, #FFC4D1);
     transform: translateY(-3px) scale(1.05);
     box-shadow: 0 8px 25px rgba(236, 194, 189, 0.5);
 }
@@ -304,7 +308,7 @@ body {
 }
 
 .fact-container {
-    border: 2px solid #292121;
+    border: 2px solid #2A2A72;
     padding: 3rem 5rem;
     border-radius: 15px;
     /*TASK: Change colour */
@@ -326,7 +330,7 @@ body {
     font-size: 1.3rem;
     line-height: 1.8;
     font-style: italic;
-    color: #1d1717;
+    color: #7F95D1;
 }
 
 .fact-container + button {
@@ -348,7 +352,7 @@ body {
     max-width: 600px;
     padding: 15px;
     font-size: 1.1rem;
-    border: 2px solid #292121;
+    border: 2px solid #2A2A72;
     border-radius: 10px;
     font-family: 'Inter', sans-serif;
     transition: all 0.3s ease;
